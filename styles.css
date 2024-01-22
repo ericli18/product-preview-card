@@ -45,12 +45,6 @@ p, h1, h2, h3, h4, h5, h6 {
   isolation: isolate;
 }
 
-/* main {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-} */
-
 :root {
   --verydarkblue: hsl(212, 21%, 14%);
   --darkgrayishblue: hsl(228, 12%, 48%);
@@ -59,34 +53,111 @@ p, h1, h2, h3, h4, h5, h6 {
   --cream: hsl(30, 38%, 92%);
 }
 
-@media screen and (max-width: 768px) {
-  .card {
-    flex-direction: column;
-  }
+body {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+  background-color: var(--cream);
+}
+
+main {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex: 1;
 }
 
 .card {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  border: 2px solid red;
-  max-height: 20em;
-  max-width: 60em;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  border: none;
+  border-radius: 1rem;
+  max-width: 46rem;
+  background-color: var(--white);
+  overflow: hidden;
 }
 
+/* ? Flex basis instead of flex-grow */
 .text-container {
-
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  padding: 3rem;
+  /* flex: 0 0 50%; */
+  /* text-wrap: wrap; */
 }
 
 .image-container {
-  overflow: hidden;
-  height: 100%
+  min-width: 100%;
 }
 
 .image {
-  object-fit: cover;
+  width: 100%;
+}
+
+.product-type {
+  text-transform: uppercase;
+  letter-spacing: .5rem;
+  font-size: 1rem;
+  font-family: "Montseratt", sans-serif;
+  color: var(--darkgrayishblue);
+}
+
+.product-title {
+  font-family: "Fraunces", sans-serif;
+  font-weight: 700;
+  font-size: 2.5rem;
+  line-height: 2.7rem;
+}
+
+.product-description {
+  font-family: "Montserrat", sans-serif;
+  font-size: 1.05rem;
+  color: var(--darkgrayishblue)
+}
+
+.price-container {
+  display: flex;
+  align-items: center;
+}
+
+.price-current {
+  font-size: 2.5rem;
+  font-family: "Fraunces", sans-serif;
+  font-weight: 700;
+  color: var(--darkcyan);
+  margin-right: 1.6rem;
+}
+
+.price-previous {
+  color: var(--darkgrayishblue);
+  font-size: 1.08rem;
+  font-family: "Montserrat", sans-serif;
+  /* letter-spacing: 0; */
 }
 
 .cart-button {
-  
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: var(--darkcyan);
+  color: white;
+  font-family: "Montserrat", sans-serif;
+  font-size: 1.1rem;
+  font-weight: 500;
+  padding: 1.0rem;
+  border: none;
+  border-radius: .7rem;
+}
+
+.cart-text {
+  margin-left: 0.5rem;
+}
+
+@media screen and (max-width: 765px) {
+  .card {
+    display: flex;
+    flex-direction: column;
+    max-width: 30rem;
+  }
 }

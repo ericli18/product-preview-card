@@ -88,5 +88,32 @@ p, h1, h2, h3, h4, h5, h6 {
 }
 
 .cart-button {
-  
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: var(--darkcyan);
+  color: white;
+  font-family: "Montserrat", sans-serif;
+  font-size: 1.1rem;
+  font-weight: 500;
+  padding: 1.0rem;
+  border: none;
+  border-radius: .7rem;
+  cursor: pointer;
 }
+
+.cart-button:hover {
+  background-color: var(--verydarkblue);
+}
+
+.cart-text {
+  margin-left: 0.5rem;
+}
+
+@media screen and (max-width: 765px) {
+  .card {
+    display: flex;
+    flex-direction: column;
+    max-width: 30rem;
+  }
+} 

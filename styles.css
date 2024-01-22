@@ -58,6 +58,7 @@ body {
   flex-direction: column;
   min-height: 100vh;
   background-color: var(--cream);
+  padding: 1rem;
 }
 
 main {
@@ -119,6 +120,7 @@ main {
 .price-container {
   display: flex;
   align-items: center;
+  column-gap: 1.6rem;
 }
 
 .price-current {
@@ -126,7 +128,6 @@ main {
   font-family: "Fraunces", sans-serif;
   font-weight: 700;
   color: var(--darkcyan);
-  margin-right: 1.6rem;
 }
 
 .price-previous {
@@ -148,6 +149,7 @@ main {
   padding: 1.0rem;
   border: none;
   border-radius: .7rem;
+  column-gap: 0.5rem;
   cursor: pointer;
 }
 
@@ -155,17 +157,14 @@ main {
   background-color: var(--verydarkblue);
 }
 
-.cart-text {
-  margin-left: 0.5rem;
-}
-
-@media screen and (max-width: 765px) {
+@media screen and (max-width: 46rem) {
   :root {
     font-size: 12px;
   }
   .card {
-    display: flex;
-    flex-direction: column;
+    /* display: flex;
+    flex-direction: column; */
+    grid-template-columns: 1fr;
     max-width: 29rem;
   }
   .text-container {

@@ -160,9 +160,15 @@ main {
 }
 
 @media screen and (max-width: 765px) {
+  :root {
+    font-size: 12px;
+  }
   .card {
     display: flex;
     flex-direction: column;
-    max-width: 30rem;
+    max-width: 29rem;
+  }
+  .text-container {
+    gap: 1rem;
   }
 } 
